@@ -14,5 +14,5 @@ COPY --from=build /app/build/http_server /app/http_server
 COPY --from=build /app/public /app/public
 USER appuser
 ENV HTTP_HOST=0.0.0.0 HTTP_PORT=8080 HTTP_DOC_ROOT=/app/public
-EXPOSE 8080
+EXPOSE 10000
 CMD ["/app/http_server"]

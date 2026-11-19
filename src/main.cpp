@@ -41,8 +41,8 @@ int main() {
 
     config.host = envOr("HTTP_HOST", config.host);
     config.port = static_cast<int>(
-        envSize("HTTP_PORT", config.port)
-    );
+    envSize("PORT", envSize("HTTP_PORT", config.port))
+);
 
     config.threads = envSize(
         "HTTP_THREADS",
